@@ -68,7 +68,7 @@
             $this->smarty->assign('title','Clientes');
             $this->smarty->display('Clientes/Registro.tpl');
         }
-         public function Inicio()
+         public function visInicio()
         { 
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Clientes/Inicio.tpl');

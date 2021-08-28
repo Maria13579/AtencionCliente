@@ -3,6 +3,6 @@
 <br/><br/>
 <div class="center-align">
 <a href="?class=Direcciones&method=VistaInicio" class="waves-effect waves-light btn"><i class="material-icons right">assignment_ind</i>Trabajador</a>
-<a href="?class=Direcciones&method=Inicio" class="waves-effect waves-light btn"><i class="material-icons right">face</i>Cliente</a>
+<a href="?class=Direcciones&method=visInicio" class="waves-effect waves-light btn"><i class="material-icons right">face</i>Cliente</a>
 </div>
 {include file="templates/Cabeceras/Footer.tpl"}
