@@ -3,7 +3,7 @@
     {
         function __construct ()
         {
-            $servidor="localhost";
+            $servidor="mysql.webcindario.com";
             $pass="Corona2468@";
             $user="atencionmk";
             $DB="atencionmk";
