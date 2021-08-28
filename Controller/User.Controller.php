@@ -16,6 +16,7 @@
         {        
             $user=$_POST['user'];
             $pass=$_POST['pass'];
+            
             $dato=$this->persona->BuscarUsuario($user,$pass);   
             if($dato->num_rows==1)
             {
@@ -63,10 +64,27 @@
                     $this->smarty->assign('nombre', $_SESSION['nombre']); 
                     $this->smarty->assign('apellido', $_SESSION['apellido']);
                     $this->smarty->assign('ro', $_SESSION['rol']); 
-                    $this->smarty->assign('title','Cliente');
+                    $this->smarty->assign('title','Trabajador');
                     $this->smarty->display('Trabajador/trabajador.tpl');
              
-                }              
+                }  
+                else if($vec[0]['Rol_id_Rol']==3)    
+                {
+                    $_SESSION['nombre'] = $vec[0]['nombre'];
+                    $_SESSION['apellido'] = $vec[0]['Apellido'];
+                    $_SESSION['rol'] = $vec[0]['Rol_id_Rol'];
+                    $_SESSION['idUsua']=$vec[0]['id_Usuario'];  
+                    if($_SESSION['rol']==3)
+                    {
+                        $_SESSION['rol']= "Cliente";
+                    }
+                    $this->smarty->assign('nombre', $_SESSION['nombre']); 
+                    $this->smarty->assign('apellido', $_SESSION['apellido']);
+                    $this->smarty->assign('ro', $_SESSION['rol']); 
+                    $this->smarty->assign('title','Cliente');
+                    $this->smarty->display('Trabajador/trabajador.tpl');
+
+                }       
             }
             else
             {      
