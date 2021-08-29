@@ -65,6 +65,7 @@
         
          public function Registro()
         { 
+            
             $this->smarty->assign('title','Clientes');
             $this->smarty->display('Clientes/Registro.tpl');
         }
@@ -72,6 +73,51 @@
         { 
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Clientes/Inicio.tpl');
+        }
+        public function VisElegir()
+        {
+            $this->Dataencabezado(); 
+            $this->smarty->assign('title','Clientes');
+            $this->smarty->display('Clientes/Elegir.tpl');
+        }
+        public function Codigo()
+        { 
+            $this->Dataencabezado(); 
+            $this->smarty->assign('title','Clientes');
+            $this->smarty->display('Clientes/Codigo.tpl');
+            
+        }
+        public function CodigoR()
+        { 
+            $this->Dataencabezado(); 
+            $this->smarty->assign('title','Clientes');
+            $this->smarty->display('Clientes/CodigoR.tpl');
+            
+        }
+        public function CodigoV()
+        { 
+            $this->Dataencabezado(); 
+            $this->smarty->assign('title','Clientes');
+            $this->smarty->display('Clientes/CodigoV.tpl');
+            
+        }
+        public function Ven()
+        {
+            $this->Dataencabezado(); 
+            $this->smarty->assign('title','Clientes');
+            $this->smarty->display('Clientes/Ven.tpl');
+        }
+        public function Redu()
+        {
+            $this->Dataencabezado(); 
+            $this->smarty->assign('title','Clientes');
+            $this->smarty->display('Clientes/ReDu.tpl');
+        }
+        public function ProTec()
+        {
+            $this->Dataencabezado(); 
+            $this->smarty->assign('title','Clientes');
+            $this->smarty->display('Clientes/ProTec.tpl');
         }
     
     }   

@@ -5,12 +5,14 @@
         public $persona;
         public $USUARIO;
         public $direc;
+        public $clien;
         public function __construct()
         {
         
             $this->persona = new Usuario();
             $this->smarty = new Smarty();
             $this->direc = new Direcciones();
+            $this->clien = new Clientes();
         }
         public function BuscarUsuario()
         {        
@@ -68,7 +70,30 @@
                     $this->smarty->display('Trabajador/trabajador.tpl');
              
                 }  
-                else if($vec[0]['Rol_id_Rol']==3)    
+           
+            }
+            else
+            {      
+                    $this->smarty->assign('msn','Usuario o Contaseña incorrecto'); 
+                    $this->smarty->assign('title','Inicio Sesion');       
+                    $this->smarty->display('Trabajador/Iniciotrabajador.tpl');                             
+            }
+        
+        }
+        public function buscarclientes()
+        {
+            $name=$_POST['nombre'];
+            $lastname=$_POST['apellido'];
+            $phone=$_POST['Telefono'];
+            $dato=$this->clien->BuscarCliente($name,$lastname,$phone);   
+            if($dato->num_rows==1)
+            {
+                $vec=array();
+                while($fila=mysqli_fetch_assoc($dato))
+                {
+                    array_push($vec,$fila);
+                }  
+                if($vec[0]['Rol_id_Rol']==3) 
                 {
                     $_SESSION['nombre'] = $vec[0]['nombre'];
                     $_SESSION['apellido'] = $vec[0]['Apellido'];
@@ -82,17 +107,9 @@
                     $this->smarty->assign('apellido', $_SESSION['apellido']);
                     $this->smarty->assign('ro', $_SESSION['rol']); 
                     $this->smarty->assign('title','Cliente');
-                    $this->smarty->display('Trabajador/trabajador.tpl');
-
-                }       
+                    $this->direc->VisElegir();
+                }
             }
-            else
-            {      
-                    $this->smarty->assign('msn','Usuario o Contaseña incorrecto'); 
-                    $this->smarty->assign('title','Inicio Sesion');       
-                    $this->smarty->display('Trabajador/Iniciotrabajador.tpl');                             
-            }
-        
         }
     }
 ?>
