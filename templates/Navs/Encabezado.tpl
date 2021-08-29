@@ -4,11 +4,11 @@
   {if isset($nombre)}
     {$nombre}  {$apellido} {$ro}
     {else}
-      Inicio Sesion            
+      Bienvenido         
   {/if}
     </a>
   <ul id="nav-mobile" class="right hide-on-med-and-down">
-    <li><a href="?class=Home&method=Inicio">👈 Salir  </a></li>
+    <li><a href="?class=Home&method=Inicio">Salir 👈 </a></li>
   </ul>
 </div>
 </nav>

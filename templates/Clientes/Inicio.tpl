@@ -1,12 +1,9 @@
 {include file="templates/Cabeceras/Header.tpl"}
-{include file="Navs/Encabezadon.tpl"}
+{include file="Navs/Encabezado.tpl"}
 
 
 {if $nav='Trabajador'}
-    <div class="collection">
-    <a href="?class=Direcciones&method=Registro" class="collection-item ">Registro</a>
-    </div>
-    </div>
+ 
 {/if}
 
 <div>
@@ -33,8 +30,8 @@
                 <label class="active" for="first_name2">Pass</label>
             </div>
         </div>
-        <div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+        <div class="center-align">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Iniciar Sesion
          <i class="material-icons right">send</i>
         </button>
        </div>
@@ -42,4 +39,7 @@
 
        
     </form>
+    <div class="center-align">
+    <a href="?class=Direcciones&method=Registro" class="waves-effect waves-light btn"><i class="material-icons right">assignment</i>Registro</a>
+    </div>
 </div>

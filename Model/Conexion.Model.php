@@ -9,7 +9,7 @@
             //"Corona2468@";
             $user="root";
             //"atencionmk";
-            $DB="proyecto"
+            $DB="proyecto";
             //"atencionmk";
 
             parent::__construct($servidor,$user,$pass,$DB);
