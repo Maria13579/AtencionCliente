@@ -3,10 +3,14 @@
     {
         function __construct ()
         {
-            $servidor="mysql.webcindario.com";
-            $pass="Corona2468@";
-            $user="atencionmk";
-            $DB="atencionmk";
+            $servidor="localhost";
+            //"mysql.webcindario.com";
+            $pass="";
+            //"Corona2468@";
+            $user="root";
+            //"atencionmk";
+            $DB="proyecto";
+            //"atencionmk";
 
             parent::__construct($servidor,$user,$pass,$DB);
             $this->query("SET NAMES 'utf8';");
