@@ -7,10 +7,18 @@
         {
             Session_start();
             $this->codi=new cod();
+            
         }
         public function CodigoVentas()
         {
-          
+          $co=$this->codi->Vercodigo(C)
+          $vec = array();
+          while($fila=mysqli_fetch_assoc($co))
+          {
+              array_push($vec,$fila);
+          } 
+          var_dump($vec);
+
             $_SESSION['idUsua']
             
         }
