@@ -80,11 +80,11 @@
             $this->smarty->assign('title','Clientes');
             $this->smarty->display('Clientes/Elegir.tpl');
         }
-        public function Codigo()
+        public function CodigoP()
         { 
             $this->Dataencabezado(); 
             $this->smarty->assign('title','Clientes');
-            $this->smarty->display('Clientes/Codigo.tpl');
+            $this->smarty->display('Clientes/CodigoP.tpl');
             
         }
         public function CodigoR()
