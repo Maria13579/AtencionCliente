@@ -8,7 +8,7 @@
         }
         public function Vercodigo($l)
         {
-            $result=$this->con->query("SELECT * FROM `codigo` WHERE `letra`='$l' ORDER BY `Codigo` ASC ");
+            $result=$this->con->query("SELECT * FROM `codigo` WHERE `letra`='$l' ORDER BY `Codigo` DESC ");
             $this->con->close();
             return $result;
         }

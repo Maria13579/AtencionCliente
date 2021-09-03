@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-03 15:39:38
-  from 'C:\adobeTemp\htdocs\AtencionCliente\templates\Clientes\Ven.tpl' */
+/* Smarty version 3.1.39, created on 2021-09-03 15:45:44
+  from 'C:\adobeTemp\htdocs\AtencionCliente\templates\Clientes\CodigoV.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6132259a981907_44661039',
+  'unifunc' => 'content_613227088a4208_29642080',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'f83dba1c77486513defe054056dfa9e24ce43f46' => 
+    'b760cc99a0d80132a467b7b36e96c2f9aca04103' => 
     array (
-      0 => 'C:\\adobeTemp\\htdocs\\AtencionCliente\\templates\\Clientes\\Ven.tpl',
-      1 => 1630676371,
+      0 => 'C:\\adobeTemp\\htdocs\\AtencionCliente\\templates\\Clientes\\CodigoV.tpl',
+      1 => 1630675821,
       2 => 'file',
     ),
   ),
@@ -24,20 +24,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/Cabeceras/Footer.tpl' => 1,
   ),
 ),false)) {
-function content_6132259a981907_44661039 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613227088a4208_29642080 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/Encabezado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/baracliente.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
-
-<div class="center-align"><h1 >Ventas</h1> </div>
+<div class="center-align"><h1>Ventas</h1></div>
 <br/><br/>
-<div >
-<div class="center-align"><a href="?class=Codigo&method=CodigoVentas" class="waves-effect waves-light btn"><i class="material-icons right">
-check</i>Generar Codigo</a></div>
-
-</div>
+<div class="center-align"><h2>Codigo:</h2></div>
+<div class="center-align"><h4></h4></div>
 <?php $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }
