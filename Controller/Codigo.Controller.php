@@ -28,8 +28,9 @@
             $c=$vec[0]['Codigo']+1;
             $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'C');
             $this->codi->Insertestado(3, $_SESSION['idcod'],$_SESSION['idUsua'],1);
-            $z= echo "C".$c;
-            $this->smarty->assign('co',$z);
+            $this->smarty->assign('co',$c);
+            $this->smarty->assign('co','C');
+            $this->direc->CodigoV();
 
           }
           else
@@ -43,8 +44,11 @@
             }
             $_SESSION['idcod'] = $vec[0]['id_Codigo'];
             $this->codi->Insertestado(3, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+            $this->smarty->assign('co',1);
+            $this->smarty->assign('le','C');
+            $this->direc->CodigoV();
           } 
-          $this->direc->CodigoV();
+         
         }
         
 
