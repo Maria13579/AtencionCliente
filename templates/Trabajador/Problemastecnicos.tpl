@@ -1,10 +1,12 @@
 {include file="templates/Cabeceras/Header.tpl"}
 {include file="Navs/Encabezado.tpl"}
 {include file="Navs/barratrabajador.tpl"}
-<h1 >Problemas tecnicos</h1> 
-<br/><br/>
-<div >
-<a href="?class=&method=" class="waves-effect waves-light btn"><i class="material-icons right">check</i>Libre</a>
-<a class="waves-effect waves-light btn"><i class="material-icons right">close</i>Ocupado</a>
+<div  class="center-align">
+    <h1 >Problemas tecnicos</h1> 
+    <br/><br/>
+    <div >
+        <a href="?class=&method=" class="waves-effect waves-light btn"><i class="material-icons right">check</i>Libre</a>
+        <a class="waves-effect waves-light btn"><i class="material-icons right">close</i>Ocupado</a>
+    </div>
 </div>
 {include file="templates/Cabeceras/Footer.tpl"}
