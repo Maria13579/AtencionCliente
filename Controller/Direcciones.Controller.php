@@ -71,7 +71,7 @@
         }
          public function visInicio()
         { 
-            $this->smarty->assign('title','Trabajador');
+            $this->smarty->assign('title','Clientes');
             $this->smarty->display('Clientes/Inicio.tpl');
         }
         public function VisElegir()
