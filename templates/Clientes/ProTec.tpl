@@ -4,7 +4,7 @@
 
 
 <div class="center-align"><h1 >Problemas tecnicos</h1> </div>
-<br/><br/>
+<br/>
 <div >
 <div class="center-align"><a href="?class=Codigo&method=Codigoprotec" class="waves-effect waves-light btn"><i class="material-icons right">
 </i>Generar Codigo</a></div>

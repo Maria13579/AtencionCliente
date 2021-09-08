@@ -33,6 +33,7 @@
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 
+            $this->smarty->assign('title','En espera');
             $this->smarty->display('Clientes/CodigoV.tpl');
           }
           else
@@ -51,6 +52,7 @@
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 
+            $this->smarty->assign('title','En espera');
             $this->smarty->display('Clientes/CodigoV.tpl');
           } 
          
