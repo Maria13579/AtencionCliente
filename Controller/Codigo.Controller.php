@@ -29,9 +29,11 @@
             $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'C');
             $this->codi->Insertestado(3, $_SESSION['idcod'],$_SESSION['idUsua'],1);
             $this->smarty->assign('co',$c);
-            $this->smarty->assign('co','C');
-            $this->direc->CodigoV();
-
+            $this->smarty->assign('le','C');
+            $this->smarty->assign('nombre', $_SESSION['nombre']); 
+            $this->smarty->assign('apellido', $_SESSION['apellido']);
+            $this->smarty->assign('ro', $_SESSION['rol']); 
+            $this->smarty->display('Clientes/CodigoV.tpl');
           }
           else
           {
@@ -46,7 +48,10 @@
             $this->codi->Insertestado(3, $_SESSION['idcod'],$_SESSION['idUsua'],1);
             $this->smarty->assign('co',1);
             $this->smarty->assign('le','C');
-            $this->direc->CodigoV();
+            $this->smarty->assign('nombre', $_SESSION['nombre']); 
+            $this->smarty->assign('apellido', $_SESSION['apellido']);
+            $this->smarty->assign('ro', $_SESSION['rol']); 
+            $this->smarty->display('Clientes/CodigoV.tpl');
           } 
          
         }
@@ -55,7 +60,7 @@
         public function Codigoredu()
         {
             $co=$this->codi->Vercodigo('B');
-            if ($co>0)
+            if ($co->num_rows>0)
             {
               $vec = array();
               while($fila=mysqli_fetch_assoc($co))
@@ -66,6 +71,13 @@
               $c=$vec[0]['Codigo']+1;
               $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'B');
               $this->codi->Insertestado(2, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+              $this->smarty->assign('co',$c);
+              $this->smarty->assign('le','B');
+              $this->smarty->assign('nombre', $_SESSION['nombre']); 
+              $this->smarty->assign('apellido', $_SESSION['apellido']);
+              $this->smarty->assign('ro', $_SESSION['rol']); 
+              $this->smarty->assign('title','En espera');
+              $this->smarty->display('Clientes/CodigoR.tpl');
             }
             else
             {
@@ -78,15 +90,21 @@
               }
               $_SESSION['idcod'] = $vec[0]['id_Codigo'];
               $this->codi->Insertestado(2, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+              $this->smarty->assign('co',1);
+              $this->smarty->assign('le','B');
+              $this->smarty->assign('nombre', $_SESSION['nombre']); 
+              $this->smarty->assign('apellido', $_SESSION['apellido']);
+              $this->smarty->assign('ro', $_SESSION['rol']);
+              $this->smarty->assign('title','En espera');
+              $this->smarty->display('Clientes/CodigoR.tpl');
             }
-            $this->direc->CodigoR();
-
         }
+
 
         public function Codigoprotec()
         {
             $co=$this->codi->Vercodigo('A');
-            if ($co>0)
+            if ($co->num_rows>0)
             {
               $vec = array();
               while($fila=mysqli_fetch_assoc($co))
@@ -97,6 +115,13 @@
               $c=$vec[0]['Codigo']+1;
               $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'A');
               $this->codi->Insertestado(1, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+              $this->smarty->assign('co',$c);
+              $this->smarty->assign('le','A');
+              $this->smarty->assign('nombre', $_SESSION['nombre']); 
+              $this->smarty->assign('apellido', $_SESSION['apellido']);
+              $this->smarty->assign('ro', $_SESSION['rol']); 
+              $this->smarty->assign('title','En espera');
+              $this->smarty->display('Clientes/CodigoP.tpl');
             }
             else
             {
@@ -109,8 +134,15 @@
               }
               $_SESSION['idcod'] = $vec[0]['id_Codigo'];
               $this->codi->Insertestado(1, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+              $this->smarty->assign('co',1);
+              $this->smarty->assign('le','A');
+              $this->smarty->assign('nombre', $_SESSION['nombre']); 
+              $this->smarty->assign('apellido', $_SESSION['apellido']);
+              $this->smarty->assign('ro', $_SESSION['rol']); 
+              $this->smarty->assign('title','En espera');
+              $this->smarty->display('Clientes/CodigoP.tpl');
             }
-            $this->direc->CodigoP();
+            
         }
     }
 ?>
