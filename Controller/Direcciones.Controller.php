@@ -4,11 +4,13 @@
     {
         public $smarty;
         public $admin;
+        public $esta;
         public function __construct()
         {
             Session_start();
             $this->smarty = new Smarty();
             $this->admin = new Admin();
+            $this->esta = new Estados();
         }
         public function VistaInicio()
         {
@@ -45,13 +47,34 @@
         {
        
             $this->Dataencabezado(); 
+            $v=$this->esta->lisprotec();
+            if ($v->num_rows>0)
+            {
+              $vec = array();
+              while($fila=mysqli_fetch_assoc($v))
+              {
+                  array_push($vec,$fila);
+              }
+            }
+            $this->smarty->assign('listaesperav',$v);
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/ventas.tpl');
         }
         public function Visresoluciondudas()
         {
-          
             $this->Dataencabezado();  
+             
+            $r=$this->esta->lisprotec();
+            if ($r->num_rows>0)
+            {
+              $vec = array();
+              while($fila=mysqli_fetch_assoc($r))
+              {
+                  array_push($vec,$fila);
+              }
+            }
+            $this->smarty->assign('listaesperar',$r);
+            
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/resoluciondudas.tpl');
         }
@@ -59,6 +82,17 @@
         {
             
             $this->Dataencabezado(); 
+            
+            $e=$this->esta->lisprotec();
+            if ($e->num_rows>0)
+            {
+              $vec = array();
+              while($fila=mysqli_fetch_assoc($e))
+              {
+                  array_push($vec,$fila);
+              }
+            }
+            $this->smarty->assign('listaesperap',$e);
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/Problemastecnicos.tpl');
         }

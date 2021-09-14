@@ -5,7 +5,36 @@
     <h1 >Resolucion de dudas</h1> 
     <br/><br/>
     <div >
-        <a href="?class=&method=" class="waves-effect waves-light btn"><i class="material-icons right">check</i>Atendido</a>
+        <a href="?class=Estado&method=atendidoredu" class="waves-effect waves-light btn"><i class="material-icons right">check</i>Atendido</a>
     </div>
-</div>
+    <br/>
+    </div>
+    <div class ="col s8">
+    <table>
+        <thead>
+            <tr>    
+                <th>Cliente</th>                          
+                <th>Codigo</th>
+                <th>Estado</th>
+                                         
+            </tr>
+        </thead>
+        <tbody>
+        {if isset($listaesperar)}
+            {foreach from=$listaesperar item=$r}
+                <tr>
+                    <td>
+                     {$r['Usuario_id_Usuario']}
+                    </td>
+                    <td>
+                    {$r['Codigo_id_Codigo']}
+                    </td>
+                    <td>
+                    {$r['Estado_idEstado']}
+                    </td>                                
+                </tr>
+            {/foreach}
+        {/if}
+        </tbody>
+    </table>
 {include file="templates/Cabeceras/Footer.tpl"}

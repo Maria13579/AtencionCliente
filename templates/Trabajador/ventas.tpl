@@ -5,8 +5,38 @@
     <h1 >Ventas</h1> 
     <br/><br/>
     <div >
-        <a href="?class=&method=" class="waves-effect waves-light btn"><i class="material-icons right">check</i>Libre</a>
-        <a class="waves-effect waves-light btn"><i class="material-icons right">close</i>Ocupado</a>
+        <a href="?class=Estado&method=atendidoventas" class="waves-effect waves-light btn"><i class="material-icons right">check</i>Atendido</a>
     </div>
-</div>
+    <br/>
+    </div>            
+        <div class ="col s8">
+            <table>
+                <thead>
+                    <tr>    
+                        <th>Cliente</th>                          
+                        <th>Codigo</th>
+                        <th>Estado</th>
+                                                
+                    </tr>
+                </thead>
+                <tbody>
+                {if isset($listaesperav)}
+                    {foreach from=$listaesperav item=$v}
+                        <tr>
+                            <td>
+                            {$v['Usuario_id_Usuario']}
+                            </td>
+                            <td>
+                            {$v['Codigo_id_Codigo']}
+                            </td>
+                            <td>
+                            {$v['Estado_idEstado']}
+                            </td>                                
+                        </tr>
+                    {/foreach}
+                {/if}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {include file="templates/Cabeceras/Footer.tpl"}
