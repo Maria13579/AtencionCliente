@@ -30,8 +30,8 @@
                             {$v['Codigo_id_Codigo']}
                             </td>
                             <td>
-                            {$v['Estado_idEstado']}
-                            </td>                                
+                            Espera
+                            </td>                                 
                         </tr>
                     {/foreach}
                 {/if}

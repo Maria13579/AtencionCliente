@@ -30,7 +30,7 @@
                     {$r['Codigo_id_Codigo']}
                     </td>
                     <td>
-                    {$r['Estado_idEstado']}
+                    Espera
                     </td>                                
                 </tr>
             {/foreach}

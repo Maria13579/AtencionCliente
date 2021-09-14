@@ -30,11 +30,12 @@
                                 {$e['Codigo_id_Codigo']}
                                 </td>
                                 <td>
-                                {$e['Estado_idEstado']}
+                                Espera
                                 </td>                                
                             </tr>
                         {/foreach}
                     {/if}
+                      
                     </tbody>
                 </table>
 {include file="templates/Cabeceras/Footer.tpl"}

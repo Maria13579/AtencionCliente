@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-14 03:17:53
+/* Smarty version 3.1.39, created on 2021-09-14 04:10:45
   from 'C:\adobeTemp\htdocs\AtencionCliente\templates\Trabajador\resoluciondudas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613ff841f1ab54_46871322',
+  'unifunc' => 'content_614004a55533e4_39955087',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c81dc58684c19e756110d05516fe9e21487ab44f' => 
     array (
       0 => 'C:\\adobeTemp\\htdocs\\AtencionCliente\\templates\\Trabajador\\resoluciondudas.tpl',
-      1 => 1631582258,
+      1 => 1631585429,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/Cabeceras/Footer.tpl' => 1,
   ),
 ),false)) {
-function content_613ff841f1ab54_46871322 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614004a55533e4_39955087 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/Encabezado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/barratrabajador.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -65,8 +65,7 @@ $_smarty_tpl->tpl_vars['r']->do_else = false;
 
                     </td>
                     <td>
-                    <?php echo $_smarty_tpl->tpl_vars['r']->value['Estado_idEstado'];?>
-
+                    Espera
                     </td>                                
                 </tr>
             <?php

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-14 03:17:53
+/* Smarty version 3.1.39, created on 2021-09-14 04:10:17
   from 'C:\adobeTemp\htdocs\AtencionCliente\templates\Trabajador\Problemastecnicos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613ff8416b2969_49061763',
+  'unifunc' => 'content_61400489c0c6f8_48205894',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3bcd7e9b0921f8e348ad46c0f26fc3b97c9b5fd4' => 
     array (
       0 => 'C:\\adobeTemp\\htdocs\\AtencionCliente\\templates\\Trabajador\\Problemastecnicos.tpl',
-      1 => 1631582247,
+      1 => 1631585415,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/Cabeceras/Footer.tpl' => 1,
   ),
 ),false)) {
-function content_613ff8416b2969_49061763 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61400489c0c6f8_48205894 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/Encabezado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/barratrabajador.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -65,14 +65,14 @@ $_smarty_tpl->tpl_vars['e']->do_else = false;
 
                                 </td>
                                 <td>
-                                <?php echo $_smarty_tpl->tpl_vars['e']->value['Estado_idEstado'];?>
-
+                                Espera
                                 </td>                                
                             </tr>
                         <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <?php }?>
+                      
                     </tbody>
                 </table>
 <?php $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
