@@ -50,7 +50,8 @@
         {
        
             $this->Dataencabezado(); 
-            $v=$this->esta->lisprotec();
+            $v=$this->esta->lisventa();
+           
             if ($v->num_rows>0)
             {
               $vec = array();
@@ -68,7 +69,7 @@
         {
             $this->Dataencabezado();  
              
-            $r=$this->esta->lisprotec();
+            $r=$this->esta->lisredu();
             if ($r->num_rows>0)
             {
               $vec = array();
