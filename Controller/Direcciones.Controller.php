@@ -17,12 +17,14 @@
             $this->smarty->assign('title','Inicio Sesion Empleados');
             $this->smarty->display('Trabajador/Iniciotrabajador.tpl');
         }
+
         public function Dataencabezado()
         {
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 
         }
+
         public function VistaCrearTrabajador()
         {
             $a=$this->admin->VerRol();
@@ -37,6 +39,7 @@
             $this->smarty->display('Administrador/Creartrabajador.tpl');
 
         }
+
         public function Vistrabajador()
         {
             $this->Dataencabezado(); 
@@ -60,6 +63,7 @@
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/ventas.tpl');
         }
+
         public function Visresoluciondudas()
         {
             $this->Dataencabezado();  
@@ -78,6 +82,7 @@
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/resoluciondudas.tpl');
         }
+        
         public function Visproblematecnico()
         {
             
