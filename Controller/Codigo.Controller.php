@@ -24,10 +24,10 @@
             {
                 array_push($vec,$fila);
             }
-            $_SESSION['idcod'] = $vec[0]['id_Codigo'];
+            $x = $vec[0]['id_Codigo'];
             $c=$vec[0]['Codigo']+1;
             $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'C');
-            $this->codi->Insertestado(3, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+            $this->codi->Insertestado(3,$x,$_SESSION['idUsua'],1);
             $this->smarty->assign('co',$c);
             $this->smarty->assign('le','C');
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
@@ -45,8 +45,8 @@
             {
                 array_push($vec,$fila);
             }
-            $_SESSION['idcod'] = $vec[0]['id_Codigo'];
-            $this->codi->Insertestado(3, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+            $y = $vec[0]['id_Codigo'];
+            $this->codi->Insertestado(3, $y,$_SESSION['idUsua'],1);
             $this->smarty->assign('co',1);
             $this->smarty->assign('le','C');
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
@@ -69,10 +69,10 @@
               {
                   array_push($vec,$fila);
               }
-              $_SESSION['idcod'] = $vec[0]['id_Codigo'];
+              $z = $vec[0]['id_Codigo'];
               $c=$vec[0]['Codigo']+1;
               $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'B');
-              $this->codi->Insertestado(2, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+              $this->codi->Insertestado(2,$z,$_SESSION['idUsua'],1);
               $this->smarty->assign('co',$c);
               $this->smarty->assign('le','B');
               $this->smarty->assign('nombre', $_SESSION['nombre']); 
@@ -90,8 +90,8 @@
               {
                   array_push($vec,$fila);
               }
-              $_SESSION['idcod'] = $vec[0]['id_Codigo'];
-              $this->codi->Insertestado(2, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+              $d = $vec[0]['id_Codigo'];
+              $this->codi->Insertestado(2, $d,$_SESSION['idUsua'],1);
               $this->smarty->assign('co',1);
               $this->smarty->assign('le','B');
               $this->smarty->assign('nombre', $_SESSION['nombre']); 
@@ -113,10 +113,10 @@
               {
                   array_push($vec,$fila);
               }
-              $_SESSION['idcod'] = $vec[0]['id_Codigo'];
+              $f = $vec[0]['id_Codigo'];
               $c=$vec[0]['Codigo']+1;
               $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'A');
-              $this->codi->Insertestado(1, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+              $this->codi->Insertestado(1, $f,$_SESSION['idUsua'],1);
               $this->smarty->assign('co',$c);
               $this->smarty->assign('le','A');
               $this->smarty->assign('nombre', $_SESSION['nombre']); 
@@ -134,8 +134,8 @@
               {
                   array_push($vec,$fila);
               }
-              $_SESSION['idcod'] = $vec[0]['id_Codigo'];
-              $this->codi->Insertestado(1, $_SESSION['idcod'],$_SESSION['idUsua'],1);
+              $g = $vec[0]['id_Codigo'];
+              $this->codi->Insertestado(1, $g,$_SESSION['idUsua'],1);
               $this->smarty->assign('co',1);
               $this->smarty->assign('le','A');
               $this->smarty->assign('nombre', $_SESSION['nombre']); 
