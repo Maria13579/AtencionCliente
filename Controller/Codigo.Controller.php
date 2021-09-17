@@ -24,9 +24,15 @@
             {
                 array_push($vec,$fila);
             }
-            $x = $vec[0]['id_Codigo'];
             $c=$vec[0]['Codigo']+1;
             $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'C');
+            $b=$this->codi->Buscarcod('C',$c);
+            $arr = array();
+            while($fila=mysqli_fetch_assoc($b))
+            {
+                array_push($arr,$fila);
+            }
+            $x = $arr[0]['id_Codigo'];
             $this->codi->Insertestado(3,$x,$_SESSION['idUsua'],1);
             $this->smarty->assign('co',$c);
             $this->smarty->assign('le','C');
@@ -69,9 +75,15 @@
               {
                   array_push($vec,$fila);
               }
-              $z = $vec[0]['id_Codigo'];
               $c=$vec[0]['Codigo']+1;
               $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'B');
+              $F=$this->codi->Buscarcod('B',$c);
+              $arr = array();
+              while($fila=mysqli_fetch_assoc($F))
+              {
+                  array_push($arr,$fila);
+              }
+              $z = $arr[0]['id_Codigo'];
               $this->codi->Insertestado(2,$z,$_SESSION['idUsua'],1);
               $this->smarty->assign('co',$c);
               $this->smarty->assign('le','B');
@@ -112,11 +124,17 @@
               while($fila=mysqli_fetch_assoc($co))
               {
                   array_push($vec,$fila);
-              }
-              $f = $vec[0]['id_Codigo'];
+              }   
               $c=$vec[0]['Codigo']+1;
               $this->codi->Insertcodigo($_SESSION['idUsua'],$c,'A');
-              $this->codi->Insertestado(1, $f,$_SESSION['idUsua'],1);
+              $f=$this->codi->Buscarcod('A',$c);
+              $vec = array();
+              while($fila=mysqli_fetch_assoc($f))
+              {
+                  array_push($vec,$fila);
+              }
+              $a = $vec[0]['id_Codigo'];
+              $this->codi->Insertestado(1, $a,$_SESSION['idUsua'],1);
               $this->smarty->assign('co',$c);
               $this->smarty->assign('le','A');
               $this->smarty->assign('nombre', $_SESSION['nombre']); 
@@ -129,12 +147,12 @@
             {
               $this->codi->Insertcodigo($_SESSION['idUsua'],1,'A');
               $d=$this->codi->Buscarcod('A',1);
-              $vec = array();
+              $arr = array();
               while($fila=mysqli_fetch_assoc($d))
               {
-                  array_push($vec,$fila);
+                  array_push($arr,$fila);
               }
-              $g = $vec[0]['id_Codigo'];
+              $g = $arr[0]['id_Codigo'];
               $this->codi->Insertestado(1, $g,$_SESSION['idUsua'],1);
               $this->smarty->assign('co',1);
               $this->smarty->assign('le','A');
