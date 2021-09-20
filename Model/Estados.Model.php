@@ -26,19 +26,15 @@
             $result=$this->con->query("UPDATE `registroestado` SET `Estado_idEstado`= 2 WHERE `idRegistroestado`= '$idr'");
             return $result;
         }
-        public function NomCliente()
+        
+        public function Vernombres($id)
         {
-            $result=$this->con->query("SELECT * FROM `usuario`");
+            $result=$this->con->query("SELECT `nombre`, `Apellido` FROM `usuario` WHERE '$id'");
             return $result;
         }
-        public function codle()
+        public function VerCodigo($id)
         {
-            $result=$this->con->query("SELECT * FROM `codigo`");
-            return $result;
-        }
-        public function verestado()
-        {
-            $result=$this->con->query("SELECT * FROM `estado`");
+            $result=$this->con->query("SELECT `Codigo`, `letra` FROM `codigo` WHERE '$id'");
             return $result;
         }
     
