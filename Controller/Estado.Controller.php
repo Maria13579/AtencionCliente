@@ -13,8 +13,7 @@
         public function atendidoprotec()
         {
             $e=$this->esta->lisprotec();
-            //select nombre from user where id='$id';
-            //$nuser=$this->buscarUs($id);
+            $con=0;
                 if ($e->num_rows>0)
                 {
                   $vec = array();
@@ -23,15 +22,17 @@
                   while($fila=mysqli_fetch_assoc($e))
                   {
                       array_push($vec,$fila);
-                      array_push($nomuser,$this->esta->Vernombres($vec['Usuario_id_Usuario']));
-                      array_push($codigose,$this->esta->VerCodigo($vec['Codigo_id_Codigo']));  
+                    $n=mysqli_fetch_assoc($this->esta->Vernombres($vec[$con]['Usuario_id_Usuario']));
+                     array_push($nomuser,$n);
+                     $c=mysqli_fetch_assoc($this->esta->VerCodigo($vec[$con]['Codigo_id_Codigo']));
+                     array_push($codigose,$c);  
+                    $con ++ ;
                   }
-                  
                 }
-
                 $idre=$vec[0]['idRegistroestado'];
                 $this->esta->atendidos($idre);          
-                $this->smarty->assign('listaesperap',$e);
+                $this->smarty->assign('nombreu',$nomuser);
+                $this->smarty->assign('codigou',$codigose);
                 $this->smarty->assign('nombre', $_SESSION['nombre']); 
                 $this->smarty->assign('apellido', $_SESSION['apellido']);
                 $this->smarty->assign('ro', $_SESSION['rol']); 
@@ -40,22 +41,28 @@
         }
         public function atendidoredu()
         {
+            $con=0;
             $r=$this->esta->lisredu();
             if ($r->num_rows>0)
             {
+                
               $vec = array();
               $nomuser = array();
               $codigose = array();
               while($fila=mysqli_fetch_assoc($r))
               {
-                  array_push($vec,$fila);
-                  array_push($nomuser,$this->esta->Vernombres($vec['Usuario_id_Usuario']));
-                  array_push($codigose,$this->esta->VerCodigo($vec['Codigo_id_Codigo']));  
+                array_push($vec,$fila);
+                $n=mysqli_fetch_assoc($this->esta->Vernombres($vec[$con]['Usuario_id_Usuario']));
+                 array_push($nomuser,$n);
+                 $c=mysqli_fetch_assoc($this->esta->VerCodigo($vec[$con]['Codigo_id_Codigo']));
+                 array_push($codigose,$c);  
+                $con ++ ;
               }
             }
             $idre=$vec[0]['idRegistroestado'];
             $this->esta->atendidos($idre);
-            $this->smarty->assign('listaesperar',$r);
+            $this->smarty->assign('nombreu',$nomuser);
+            $this->smarty->assign('codigou',$codigose);
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 
@@ -74,23 +81,17 @@
               while($fila=mysqli_fetch_assoc($v))
               {
                 array_push($vec,$fila);
-                var_dump($vec[$con]['Codigo_id_Codigo']);
-                var_dump($vec[$con]['Usuario_id_Usuario']);
-                echo "<br> <br><br>";
-                 array_push($nomuser,$this->esta->Vernombres($vec[$con]['Usuario_id_Usuario']));
-                 array_push($codigose,$this->esta->VerCodigo($vec[$con]['Codigo_id_Codigo']));  
+                $n=mysqli_fetch_assoc($this->esta->Vernombres($vec[$con]['Usuario_id_Usuario']));
+                 array_push($nomuser,$n);
+                 $c=mysqli_fetch_assoc($this->esta->VerCodigo($vec[$con]['Codigo_id_Codigo']));
+                 array_push($codigose,$c);  
                 $con ++ ;
               }
-              echo "<br> <br><br>";
-              var_dump($nomuser);
-              echo "<br> <br><br>";
-              var_dump($codigose);
-              echo "<br> <br><br>";
-                die();
             }
             $idre=$vec[0]['idRegistroestado'];
             $this->esta->atendidos($idre);
-            $this->smarty->assign('listaesperav',$v);
+            $this->smarty->assign('nombreu',$nomuser);
+            $this->smarty->assign('codigou',$codigose);
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 

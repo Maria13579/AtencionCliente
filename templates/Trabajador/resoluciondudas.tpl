@@ -9,32 +9,52 @@
     </div>
     <br/>
     </div>
-    <div class ="col s8">
+    <div class ="col s4">
     <table>
         <thead>
             <tr>    
                 <th>Cliente</th>                          
-                <th>Codigo</th>
-                <th>Estado</th>
-                                         
+                
+                                        
             </tr>
         </thead>
         <tbody>
-        {if isset($listaesperar)}
-            {foreach from=$listaesperar item=$r}
-                <tr>
-                    <td>
-                     {$r['Usuario_id_Usuario']}
-                    </td>
-                    <td>
-                    {$r['Codigo_id_Codigo']}
-                    </td>
-                    <td>
-                    Espera
-                    </td>                                
-                </tr>
-            {/foreach}
-        {/if}
+            {if isset($nombreu)}
+                {foreach from=$nombreu item=$v}
+                    <tr>
+                        <td>
+                        {$v['nombre'] }  {$v['Apellido'] }
+                        </td>                     
+                    </tr>
+              {/foreach}
+          {/if}
         </tbody>
     </table>
+</div>
+<div class="col s4">
+    <table>
+        <thead>
+            <tr>    
+                <th>Codigo</th>                          
+                <th>Espera</th>   
+                                        
+            </tr>
+        </thead>
+        <tbody>
+            {if isset($codigou)}
+                {foreach from=$codigou item=$v}
+                    <tr>
+                        <td>
+                        {$v['letra'] }  {$v['Codigo'] }
+                        </td>
+                        <td>
+                        Espera
+                        </td>                         
+                    </tr>
+            {/foreach}
+           {/if}
+        </tbody>
+    </table>   
+
+</div>
 {include file="templates/Cabeceras/Footer.tpl"}

@@ -9,34 +9,61 @@
     </div>
     <br/>
     </div>            
-        <div class ="col s8">
+        <div class ="col s4">
             <table>
                 <thead>
                     <tr>    
                         <th>Cliente</th>                          
-                        <th>Codigo</th>
-                        <th>Estado</th>
+                        
                                                 
                     </tr>
                 </thead>
                 <tbody>
-                {if isset($listaesperav)}
-                    {foreach from=$listaesperav item=$v}
+                {if isset($nombreu)}
+                    {foreach from=$nombreu item=$v}
                         <tr>
                             <td>
-                            {$v['Usuario_id_Usuario']}
+                            {$v['nombre'] }  {$v['Apellido'] }
                             </td>
-                            <td>
-                            {$v['Codigo_id_Codigo']}
-                            </td>
-                            <td>
-                            Espera
-                            </td>                                 
+                            
+
+                                                      
                         </tr>
                     {/foreach}
+               
                 {/if}
                 </tbody>
             </table>
+        </div>
+        <div class="col s4">
+        <table>
+        <thead>
+            <tr>    
+                <th>Codigo</th>                          
+                <th>Espera</th>   
+                                        
+            </tr>
+        </thead>
+        <tbody>
+        {if isset($codigou)}
+            {foreach from=$codigou item=$v}
+                <tr>
+                    <td>
+                    {$v['letra'] }  {$v['Codigo'] }
+                    </td>
+                    <td>
+                    Espera
+                    </td>
+                    
+
+                                              
+                </tr>
+            {/foreach}
+       
+        {/if}
+        </tbody>
+    </table>   
+
         </div>
     </div>
 {include file="templates/Cabeceras/Footer.tpl"}

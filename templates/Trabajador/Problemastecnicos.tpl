@@ -9,33 +9,53 @@
     </div>
     <br/>
 </div>
-            <div class ="col s8">
-                <table>
-                    <thead>
-                        <tr>    
-                            <th>Cliente</th>                          
-                            <th>Codigo</th>
-                            <th>Estado</th>
-                                                     
+    <div class ="col s4">
+        <table>
+            <thead>
+                <tr>    
+                    <th>Cliente</th>                          
+                    
+                                            
+                </tr>
+            </thead>
+            <tbody>
+                {if isset($nombreu)}
+                    {foreach from=$nombreu item=$v}
+                        <tr>
+                            <td>
+                            {$v['nombre'] }  {$v['Apellido'] }
+                            </td>                     
                         </tr>
-                    </thead>
-                    <tbody>
-                    {if isset($listaesperap)}
-                        {foreach from=$listaesperap item=$e}
-                            <tr>
-                                <td>
-                                 {$e['Usuario_id_Usuario']}
-                                </td>
-                                <td>
-                                {$e['Codigo_id_Codigo']}
-                                </td>
-                                <td>
-                                Espera
-                                </td>                                
-                            </tr>
-                        {/foreach}
-                    {/if}
-                      
-                    </tbody>
-                </table>
+                  {/foreach}
+              {/if}
+            </tbody>
+        </table>
+    </div>
+    <div class="col s4">
+        <table>
+            <thead>
+                <tr>    
+                    <th>Codigo</th>                          
+                    <th>Espera</th>   
+                                            
+                </tr>
+            </thead>
+            <tbody>
+                {if isset($codigou)}
+                    {foreach from=$codigou item=$v}
+                        <tr>
+                            <td>
+                            {$v['letra'] }  {$v['Codigo'] }
+                            </td>
+                            <td>
+                            Espera
+                            </td>                         
+                        </tr>
+                {/foreach}
+               {/if}
+            </tbody>
+        </table>   
+
+    </div>
+</div>
 {include file="templates/Cabeceras/Footer.tpl"}

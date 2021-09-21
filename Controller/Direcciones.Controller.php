@@ -5,6 +5,7 @@
         public $smarty;
         public $admin;
         public $esta;
+        public $tablas;
         public function __construct()
         {
             Session_start();
@@ -50,17 +51,25 @@
         {
        
             $this->Dataencabezado(); 
-            $v=$this->esta->lisventa();
-           
-            if ($v->num_rows>0)
-            {
-              $vec = array();
-              while($fila=mysqli_fetch_assoc($v))
-              {
-                  array_push($vec,$fila);
-              }
-            }
-            $this->smarty->assign('listaesperav',$v);
+            $e=$this->esta->lisventa();
+            $con=0;
+                if ($e->num_rows>0)
+                {
+                  $vec = array();
+                  $nomuser = array();
+                  $codigose = array();
+                  while($fila=mysqli_fetch_assoc($e))
+                  {
+                      array_push($vec,$fila);
+                    $n=mysqli_fetch_assoc($this->esta->Vernombres($vec[$con]['Usuario_id_Usuario']));
+                     array_push($nomuser,$n);
+                     $c=mysqli_fetch_assoc($this->esta->VerCodigo($vec[$con]['Codigo_id_Codigo']));
+                     array_push($codigose,$c);  
+                    $con ++ ;
+                  }
+                }
+                $this->smarty->assign('nombreu',$nomuser);
+                $this->smarty->assign('codigou',$codigose);
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/ventas.tpl');
         }
@@ -69,19 +78,27 @@
         {
             $this->Dataencabezado();  
              
-            $r=$this->esta->lisredu();
-            if ($r->num_rows>0)
-            {
-              $vec = array();
-              while($fila=mysqli_fetch_assoc($r))
-              {
-                  array_push($vec,$fila);
-              }
-            }
-            $this->smarty->assign('listaesperar',$r);
-            
-            $this->smarty->assign('title','Trabajador');
-            $this->smarty->display('Trabajador/resoluciondudas.tpl');
+            $e=$this->esta->lisredu();
+            $con=0;
+                if ($e->num_rows>0)
+                {
+                  $vec = array();
+                  $nomuser = array();
+                  $codigose = array();
+                  while($fila=mysqli_fetch_assoc($e))
+                  {
+                      array_push($vec,$fila);
+                    $n=mysqli_fetch_assoc($this->esta->Vernombres($vec[$con]['Usuario_id_Usuario']));
+                     array_push($nomuser,$n);
+                     $c=mysqli_fetch_assoc($this->esta->VerCodigo($vec[$con]['Codigo_id_Codigo']));
+                     array_push($codigose,$c);  
+                    $con ++ ;
+                  }
+                }
+                $this->smarty->assign('nombreu',$nomuser);
+                $this->smarty->assign('codigou',$codigose);
+                $this->smarty->assign('title','Trabajador');
+                $this->smarty->display('Trabajador/resoluciondudas.tpl');
         }
         
         public function Visproblematecnico()
@@ -90,15 +107,24 @@
             $this->Dataencabezado(); 
             
             $e=$this->esta->lisprotec();
+            $con=0;
             if ($e->num_rows>0)
             {
               $vec = array();
+              $nomuser = array();
+              $codigose = array();
               while($fila=mysqli_fetch_assoc($e))
               {
                   array_push($vec,$fila);
+                $n=mysqli_fetch_assoc($this->esta->Vernombres($vec[$con]['Usuario_id_Usuario']));
+                 array_push($nomuser,$n);
+                 $c=mysqli_fetch_assoc($this->esta->VerCodigo($vec[$con]['Codigo_id_Codigo']));
+                 array_push($codigose,$c);  
+                $con ++ ;
               }
             }
-            $this->smarty->assign('listaesperap',$e);
+            $this->smarty->assign('nombreu',$nomuser);
+            $this->smarty->assign('codigou',$codigose);
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/Problemastecnicos.tpl');
         }
