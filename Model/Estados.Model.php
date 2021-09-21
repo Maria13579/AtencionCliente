@@ -29,12 +29,12 @@
         
         public function Vernombres($id)
         {
-            $result=$this->con->query("SELECT `nombre`, `Apellido` FROM `usuario` WHERE '$id'");
+            $result=$this->con->query("SELECT `nombre`, `Apellido` FROM `usuario` WHERE `id_Usuario` = '$id'");
             return $result;
         }
         public function VerCodigo($id)
         {
-            $result=$this->con->query("SELECT `Codigo`, `letra` FROM `codigo` WHERE '$id'");
+            $result=$this->con->query("SELECT `letra`, `Codigo` FROM `codigo` WHERE `id_Codigo` = '$id'");
             return $result;
         }
     
