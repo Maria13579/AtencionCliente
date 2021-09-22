@@ -28,9 +28,11 @@
                      array_push($codigose,$c);  
                     $con ++ ;
                   }
+                 $idre=$vec[0]['idRegistroestado'];
+                 $this->esta->atendidos($idre);
                 }
-                $idre=$vec[0]['idRegistroestado'];
-                $this->esta->atendidos($idre);          
+               // $idre=$vec[0]['idRegistroestado'];
+               // $this->esta->atendidos($idre);          
                 $this->smarty->assign('nombreu',$nomuser);
                 $this->smarty->assign('codigou',$codigose);
                 $this->smarty->assign('nombre', $_SESSION['nombre']); 

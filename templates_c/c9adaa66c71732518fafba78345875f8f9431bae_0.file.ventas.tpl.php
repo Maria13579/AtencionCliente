@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-21 03:04:17
+/* Smarty version 3.1.39, created on 2021-09-22 07:46:51
   from 'C:\adobeTemp\htdocs\AtencionCliente\templates\Trabajador\ventas.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61492f91def271_04094308',
+  'unifunc' => 'content_614ac34b5e08b0_35851437',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c9adaa66c71732518fafba78345875f8f9431bae' => 
     array (
       0 => 'C:\\adobeTemp\\htdocs\\AtencionCliente\\templates\\Trabajador\\ventas.tpl',
-      1 => 1632186253,
+      1 => 1632289577,
       2 => 'file',
     ),
   ),
@@ -24,8 +24,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/Cabeceras/Footer.tpl' => 1,
   ),
 ),false)) {
-function content_61492f91def271_04094308 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_614ac34b5e08b0_35851437 (Smarty_Internal_Template $_smarty_tpl) {
+echo '<?php
+    ';?>
+header("Refresh:0.3");
+<?php echo '?>';?>
+
+<?php $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/Encabezado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/barratrabajador.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -41,9 +46,7 @@ $_smarty_tpl->_subTemplateRender("file:Navs/barratrabajador.tpl", $_smarty_tpl->
             <table>
                 <thead>
                     <tr>    
-                        <th>Cliente</th>                          
-                        
-                                                
+                        <th>Cliente</th>                                                      
                     </tr>
                 </thead>
                 <tbody>

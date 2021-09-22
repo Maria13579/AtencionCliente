@@ -5,5 +5,7 @@
 
 <div class="center-align"><h3>Codigo:</h3></div>
 <div class="center-align"><h4>{$le}{$co}</h4></div>
+<div class="center-align"><a href="?class=listas&method=listasredu" class="waves-effect waves-light btn"><i class="material-icons right"></i>Ver lista de espera </a></div>
+
 </div>
 {include file="templates/Cabeceras/Footer.tpl"}

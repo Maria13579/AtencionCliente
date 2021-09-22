@@ -6,8 +6,10 @@
 <div class="center-align"><h1 >Problemas tecnicos</h1> </div>
 <br/>
 <div >
-<div class="center-align"><a href="?class=Codigo&method=Codigoprotec" class="waves-effect waves-light btn"><i class="material-icons right">
-</i>Generar Codigo</a></div>
+<div class="center-align"><a href="?class=Codigo&method=Codigoprotec" class="waves-effect waves-light btn"><i class="material-icons right">screen_lock_portrait
 
+</i>Generar Codigo</a></div>
+<br><br>
+<div class="center-align"><a href="?class=listas&method=listasprotec" class="waves-effect waves-light btn"><i class="material-icons right">airplay</i> Ver lista de espera </a></div>
 </div>
 {include file="templates/Cabeceras/Footer.tpl"}
