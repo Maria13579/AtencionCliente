@@ -22,9 +22,10 @@
                     array_push($vec,$fila);
                    $a=mysqli_fetch_assoc($this->es->VerCodigo($vec[0]['Codigo_id_Codigo']));                   
                 }
+                $this->smarty->assign('codigou',$a['letra']);
+                $this->smarty->assign('codigos', $a['Codigo']);
             }
-            $this->smarty->assign('codigou',$a['letra']);
-            $this->smarty->assign('codigos', $a['Codigo']);
+          
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 
@@ -46,9 +47,10 @@
                    $a=mysqli_fetch_assoc($this->es->VerCodigo($vec[0]['Codigo_id_Codigo']));
                    
                 }
+                $this->smarty->assign('codigou',$a['letra']);
+                $this->smarty->assign('codigos', $a['Codigo']);
             }
-            $this->smarty->assign('codigou',$a['letra']);
-            $this->smarty->assign('codigos', $a['Codigo']);
+          
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 
@@ -68,9 +70,10 @@
                     array_push($vec,$fila);
                    $a=mysqli_fetch_assoc($this->es->VerCodigo($vec[0]['Codigo_id_Codigo']));
                 }
+                $this->smarty->assign('codigou',$a['letra']);
+                $this->smarty->assign('codigos', $a['Codigo']);
             }
-            $this->smarty->assign('codigou',$a['letra']);
-            $this->smarty->assign('codigos', $a['Codigo']);
+         
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 

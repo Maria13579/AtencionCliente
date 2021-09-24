@@ -20,9 +20,10 @@
                   {
                       array_push($vec,$fila);
                   }
+                  $idre=$vec[0]['idRegistroestado'];
+                  $this->esta->atendidos($idre);
                 }
-                $idre=$vec[0]['idRegistroestado'];
-                $this->esta->atendidos($idre);
+               
 
                 $con=0;
                 $f=$this->esta->lisprotec();
@@ -40,11 +41,12 @@
                      array_push($codigose,$c);  
                     $con ++ ;
                   }
+                  $this->smarty->assign('nombreu',$nomuser);
+                  $this->smarty->assign('codigou',$codigose);
                 }
                // $idre=$vec[0]['idRegistroestado'];
                // $this->esta->atendidos($idre);          
-                $this->smarty->assign('nombreu',$nomuser);
-                $this->smarty->assign('codigou',$codigose);
+               
                 $this->smarty->assign('nombre', $_SESSION['nombre']); 
                 $this->smarty->assign('apellido', $_SESSION['apellido']);
                 $this->smarty->assign('ro', $_SESSION['rol']); 
@@ -61,10 +63,9 @@
               {
                 array_push($vec,$fila);
               }
+              $idre=$vec[0]['idRegistroestado'];
+              $this->esta->atendidos($idre);
             }
-            $idre=$vec[0]['idRegistroestado'];
-            $this->esta->atendidos($idre);
-
             $con=0;
             $s=$this->esta->lisredu();
             if ($s->num_rows>0)
@@ -81,9 +82,10 @@
                  array_push($codigose,$c);  
                 $con ++ ;
               }
+              $this->smarty->assign('nombreu',$nomuser);
+              $this->smarty->assign('codigou',$codigose);
             }
-            $this->smarty->assign('nombreu',$nomuser);
-            $this->smarty->assign('codigou',$codigose);
+      
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 
@@ -101,10 +103,10 @@
               {
                 array_push($vec,$fila);
               }
-           
+              $idre=$vec[0]['idRegistroestado'];      
+              $this->esta->atendidos($idre);
             }
-            $idre=$vec[0]['idRegistroestado'];      
-            $this->esta->atendidos($idre);
+         
 
             $w=$this->esta->lisventa();
             $con = 0;
@@ -122,9 +124,10 @@
                  array_push($codigose,$c);  
                 $con ++ ;
               }
+              $this->smarty->assign('nombreu',$nomuser);
+              $this->smarty->assign('codigou',$codigose);
             }
-            $this->smarty->assign('nombreu',$nomuser);
-            $this->smarty->assign('codigou',$codigose);
+           
             $this->smarty->assign('nombre', $_SESSION['nombre']); 
             $this->smarty->assign('apellido', $_SESSION['apellido']);
             $this->smarty->assign('ro', $_SESSION['rol']); 

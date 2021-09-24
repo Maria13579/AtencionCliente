@@ -8,7 +8,7 @@
   {/if}
     </a>
   <ul id="nav-mobile" class="right hide-on-med-and-down">
-    <li><a href="?class=Home&method=Inicio">👉🏻Salir </a></li>
+    <li><a href="?class=Home&method=Inicio"><span class="material-icons"><br>  logout</span> </a></li>
   </ul>
 </div>
 </nav>

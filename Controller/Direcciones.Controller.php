@@ -67,9 +67,10 @@
                      array_push($codigose,$c);  
                     $con ++ ;
                   }
+                  $this->smarty->assign('nombreu',$nomuser);
+                  $this->smarty->assign('codigou',$codigose);
                 }
-                $this->smarty->assign('nombreu',$nomuser);
-                $this->smarty->assign('codigou',$codigose);
+         
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/ventas.tpl');
         }
@@ -93,10 +94,11 @@
                      $c=mysqli_fetch_assoc($this->esta->VerCodigo($vec[$con]['Codigo_id_Codigo']));
                      array_push($codigose,$c);  
                     $con ++ ;
-                  }
+                  }   
+                  $this->smarty->assign('nombreu',$nomuser);
+                  $this->smarty->assign('codigou',$codigose);
                 }
-                $this->smarty->assign('nombreu',$nomuser);
-                $this->smarty->assign('codigou',$codigose);
+      
                 $this->smarty->assign('title','Trabajador');
                 $this->smarty->display('Trabajador/resoluciondudas.tpl');
         }
@@ -122,9 +124,10 @@
                  array_push($codigose,$c);  
                 $con ++ ;
               }
+              $this->smarty->assign('nombreu',$nomuser);
+              $this->smarty->assign('codigou',$codigose);
             }
-            $this->smarty->assign('nombreu',$nomuser);
-            $this->smarty->assign('codigou',$codigose);
+          
             $this->smarty->assign('title','Trabajador');
             $this->smarty->display('Trabajador/Problemastecnicos.tpl');
         }
