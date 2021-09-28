@@ -11,3 +11,4 @@
     {/if}
 {/if}
 
+{include file="templates/Cabeceras/Footer.tpl"}

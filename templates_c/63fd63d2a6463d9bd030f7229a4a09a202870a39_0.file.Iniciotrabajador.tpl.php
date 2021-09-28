@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-27 17:21:33
+/* Smarty version 3.1.39, created on 2021-09-28 03:20:56
   from 'C:\adobeTemp\htdocs\AtencionCliente\templates\Trabajador\Iniciotrabajador.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612902fd72fd62_36525236',
+  'unifunc' => 'content_61526df8d21180_69182232',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63fd63d2a6463d9bd030f7229a4a09a202870a39' => 
     array (
       0 => 'C:\\adobeTemp\\htdocs\\AtencionCliente\\templates\\Trabajador\\Iniciotrabajador.tpl',
-      1 => 1630074939,
+      1 => 1632791962,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/Cabeceras/Footer.tpl' => 1,
   ),
 ),false)) {
-function content_612902fd72fd62_36525236 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61526df8d21180_69182232 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:Navs/Encabezado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
@@ -60,6 +60,8 @@ $_smarty_tpl->_subTemplateRender("file:Navs/Encabezado.tpl", $_smarty_tpl->cache
                 </div>
                 </div>
                 <br/> <br/> <br/>
-<?php $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+                </div>
+                </div>
+                <?php $_smarty_tpl->_subTemplateRender("file:templates/Cabeceras/Footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

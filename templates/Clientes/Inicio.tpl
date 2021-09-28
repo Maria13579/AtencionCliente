@@ -46,4 +46,8 @@
     <div class="center-align">
     <a href="?class=Direcciones&method=Registro" class="waves-effect waves-light btn"><i class="material-icons right">assignment</i>Registro</a>
     </div>
-</div>
+
+    </div>
+    </div>
+    </div>
+{include file="templates/Cabeceras/Footer.tpl"}

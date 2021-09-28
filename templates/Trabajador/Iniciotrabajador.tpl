@@ -32,4 +32,6 @@
                 </div>
                 </div>
                 <br/> <br/> <br/>
-{include file="templates/Cabeceras/Footer.tpl"}
+                </div>
+                </div>
+                {include file="templates/Cabeceras/Footer.tpl"}
